@@ -12,6 +12,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public class SortItApplication {
 
@@ -35,8 +37,12 @@ public class SortItApplication {
 
         Handler handler = new Handler(configuration);
         handler.sort();
-//        Test test = new Test(configuration);
-//        test.sortTest();
+        ArrayList<Integer> arry = new ArrayList<Integer>();
+
+
+        HashSet h = new HashSet();
+        h.add(' ');
+        System.out.println(h.add("kva"));
     }
 
 }
