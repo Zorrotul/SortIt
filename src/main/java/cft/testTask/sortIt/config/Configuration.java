@@ -15,7 +15,7 @@ public class Configuration {
             this.sortMode = SortMode.ASC;
             this.fileContentType = FileContentType.getFileContentType(args[0]);
             this.outputFileNames = args[1];
-            //this.inputFileNames = List.of(args[2].split(" "));
+            //this.inputFileNames = List.of(args[2].split(" ")); TODO доделать
         } else if (args.length >= 4) {
             this.sortMode = SortMode.getSortModeByCode(args[0]);
             this.fileContentType = FileContentType.getFileContentType(args[1]);
