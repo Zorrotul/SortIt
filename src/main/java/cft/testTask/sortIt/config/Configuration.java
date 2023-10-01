@@ -11,11 +11,13 @@ public class Configuration {
     private final List<String> inputFileNames = new ArrayList<>();
 
     public Configuration(String[] args) {
-        if (args.length == 3) {
+        if (args[0]!="-a" && args[0]!="-d") {
             this.sortMode = SortMode.ASC;
             this.fileContentType = FileContentType.getFileContentType(args[0]);
             this.outputFileNames = args[1];
-            //this.inputFileNames = List.of(args[2].split(" ")); TODO доделать
+            for(int i=2;i<=args.length-1;i++) {
+                this.inputFileNames.add(args[i]);
+            }
         } else if (args.length >= 4) {
             this.sortMode = SortMode.getSortModeByCode(args[0]);
             this.fileContentType = FileContentType.getFileContentType(args[1]);
@@ -24,7 +26,7 @@ public class Configuration {
                 this.inputFileNames.add(args[i]);
             }
         } else {
-            throw new RuntimeException("wrong number of params expected 3 or 4, got " + args.length);
+            throw new RuntimeException("wrong number of params expected 3 or more, got " + args.length);
         }
     }
 
