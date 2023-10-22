@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 
 public enum SortMode {
     ASC("-a", (a, b) -> a.compareTo(b) <= 0 ? true : false, (a,b)-> a <= b ? true : false),
-    DESC("-d", (a, b) -> a.compareTo(b) <= 0 ? false : true, (a,b)-> a <= b ? false: true);
+    DESC("-d", (a, b) -> a.compareTo(b) <= 0 ? false : true, (a,b)-> a < b ? false: true);
 
     final String code;
 

@@ -1,6 +1,7 @@
 package cft.testTask.sortIt.config;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Configuration {
@@ -11,20 +12,16 @@ public class Configuration {
     private final List<String> inputFileNames = new ArrayList<>();
 
     public Configuration(String[] args) {
-        if (args[0]!="-a" && args[0]!="-d") {
+        if (!args[0].equals("-a") && !args[0].equals("-d")) {
             this.sortMode = SortMode.ASC;
             this.fileContentType = FileContentType.getFileContentType(args[0]);
             this.outputFileNames = args[1];
-            for(int i=2;i<=args.length-1;i++) {
-                this.inputFileNames.add(args[i]);
-            }
+            this.inputFileNames.addAll(Arrays.asList(args).subList(2, args.length)); // Добавляем оставшиеся в коллекцию
         } else if (args.length >= 4) {
             this.sortMode = SortMode.getSortModeByCode(args[0]);
             this.fileContentType = FileContentType.getFileContentType(args[1]);
             this.outputFileNames = args[2];
-            for(int i=3;i<=args.length-1;i++) {
-                this.inputFileNames.add(args[i]);
-            }
+            this.inputFileNames.addAll(Arrays.asList(args).subList(3, args.length));
         } else {
             throw new RuntimeException("wrong number of params expected 3 or more, got " + args.length);
         }
