@@ -24,4 +24,4 @@ public enum SortMode {
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("no supported mode " + code));
     }
-}
+}//
