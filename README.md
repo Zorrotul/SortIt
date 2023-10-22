@@ -5,11 +5,11 @@
 3. имя выходного файла, обязательное; 
 4. остальные параметры – имена входных файлов, не менее одного.
 
-Пример входных параметров: 
--a -i outputfile.txt inputfile1.txt inputfile2.txt 
--d -i outputfile.txt inputfile3.txt inputfile4.txt 
--a -s outputStringfile.txt inputStringfile1.txt inputStringfile2.txt 
--d -s outputStringfile.txt inputStringfile3.txt inputStringfile4.txt 
+Пример входных параметров:  
+-a -i outputfile.txt inputfile1.txt inputfile2.txt  
+-d -i outputfile.txt inputfile3.txt inputfile4.txt  
+-a -s outputStringfile.txt inputStringfile1.txt inputStringfile2.txt  
+-d -s outputStringfile.txt inputStringfile3.txt inputStringfile4.txt  
 
 Версия java:
 Для запуска рекоммендуется jdk-17.0.8
