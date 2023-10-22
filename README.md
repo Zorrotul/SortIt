@@ -7,7 +7,13 @@
 
 Пример входных параметров:
 -a -i outputfile.txt inputfile1.txt inputfile2.txt
+-d -i outputfile.txt inputfile3.txt inputfile4.txt
+-a -s outputStringfile.txt inputStringfile1.txt inputStringfile2.txt
+-d -s outputStringfile.txt inputStringfile3.txt inputStringfile4.txt
 
 Версия java:
 Для запуска рекоммендуется jdk-17.0.8
 
+Первая версия приложения лежит в build/libs/sortIt-0.0.1-SNAPSHOT.jar для запуска через командную строку можно использовать команду(вместо троеточия нужно вставить путь к jdk): 
+
+...\tools\jdk-17.0.8\bin\java -jar sortIt-0.0.1-SNAPSHOT.jar -s outputStringfile.txt inputStringfile1.txt inputStringfile2.txt
