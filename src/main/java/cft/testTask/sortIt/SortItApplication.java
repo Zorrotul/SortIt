@@ -9,7 +9,6 @@ public class SortItApplication {
 
     public static void main(String[] args) throws IOException {
 
-
         System.out.println("jar started");
         Configuration configuration = new Configuration(args);
 
